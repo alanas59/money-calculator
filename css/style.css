@@ -8,9 +8,21 @@ input{
     border:none;
     background-color:#DCDCDC;
     padding:5px 0px;
+    padding-left: 5px;
     border-radius:2px;
+ 
+    
 }
-
+input:focus{
+    outline: none;
+}
+                   
+#income-error,#expenses-error,#balance-error{
+    display: none;
+}
+span{
+    padding:0 8px;
+}
 button{
     border: none;
     background-color:#59A5FF;
