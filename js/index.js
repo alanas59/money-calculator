@@ -14,11 +14,7 @@ function getIncome(){
 
     
 }
-
-
-
-// get total expenses
-
+//get total expenses amount
 function getExpenses(){
    
     const foodField=document.getElementById("food-cost");
@@ -48,7 +44,7 @@ function getExpenses(){
     
 
 }
-//  saving amount
+// get saving amount %
 function savingMoney(){
     const savingInput=document.getElementById("save-input");
     const savingAmount=parseFloat(savingInput.value);
@@ -61,8 +57,7 @@ function savingMoney(){
         return savingAmount;
     }
 }
-
-
+// calculate button event  listener
 document.getElementById("calculate-btn").addEventListener("click",function(){
     const incomeAmount=getIncome();
     const totalCost=getExpenses();
@@ -73,12 +68,12 @@ document.getElementById("calculate-btn").addEventListener("click",function(){
     }
     else{
         const totalBalance=incomeAmount - totalCost;
-        document.getElementById("total-expenses").innerText=totalCost;
-        document.getElementById("total-balance").innerText=totalBalance;
+        document.getElementById("total-expenses").innerText=Math.round(totalCost);
+        document.getElementById("total-balance").innerText=Math.round(totalBalance);
     }
 
 });
-
+// save button event  listener
 document.getElementById("save-btn").addEventListener("click",function(){
    const savingAmount=(savingMoney()/100)*getIncome();
    const totalBalance=getIncome()-getExpenses();
@@ -88,8 +83,8 @@ document.getElementById("save-btn").addEventListener("click",function(){
    }
    else{
      const remainingAmount =totalBalance - savingAmount
-     document.getElementById("saving-amount").innerText=savingAmount;
-     document.getElementById("remaining-amount").innerText=remainingAmount;
+     document.getElementById("saving-amount").innerText=Math.round(savingAmount);
+     document.getElementById("remaining-amount").innerText=Math.round(remainingAmount);
    }
 });
 

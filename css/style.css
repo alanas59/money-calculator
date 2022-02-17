@@ -1,6 +1,15 @@
+/* utilities */
+#income-error,#expenses-error,#balance-error,
+#saving-input-error,#saving-amount-error{
+    display: none;
+}
+
+/* section left part styles */
 img{
     width: 100%;
 }
+
+/* section right part styles */
 .section-right{
     background-color:#F8F8F8;
 }
@@ -15,11 +24,6 @@ input{
 }
 input:focus{
     outline: none;
-}
-                   
-#income-error,#expenses-error,#balance-error,
-#saving-input-error,#saving-amount-error{
-    display: none;
 }
 span{
     padding:0 8px;

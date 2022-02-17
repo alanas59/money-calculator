@@ -10,38 +10,39 @@
 </head>
 <body>
     
-    <h1 class="text-center text-primary my-4">Money Calculation</h1>
+    <h1 class="text-center text-primary my-4">My Money Calculation</h1>
     <section class="container">
         <div class="row gx-5">
+             <!-- section left part -->
             <div class="col-md-7 section-left">
                 <img src="images/bills-dollar.jpg" alt="">
             </div>
-
+            <!-- section right part -->
             <div class="col-md-5 section-right py-3">
                 <div class="text-center">
                     <!-- income field -->
                     <h4 class="my-3">Income</h4>
                   Income: <input id="income-amount" type="text" value="0">
-                  <p id="income-error" class="my-4">&#10060;Please give valid number</p>
+                  <p id="income-error" class="my-4">&#10060;Please give a valid number</p>
                     <!-- expenses field -->
                     <h4 class="my-3">Expenses</h4>
                     Food: <input id="food-cost" type="text" value="0"><br><br>
                     Rent: <input id="rent-cost" type="text" value="0"><br><br>
                   Cloths: <input id="cloths-cost"type="text" value="0"><br><br>
                    <button id="calculate-btn">Calculate</button>
-                   <p id="expenses-error"  class="my-4">&#10060;Please give valid number</p>
+                   <p id="expenses-error"  class="my-4">&#10060;Please give a valid number</p>
                    <!-- calculation -->
-                   <h3 class="my-3">Total Expenses:<span id="total-expenses" >00</span></h3>
-                   <h4  class="my-3">Balance:<span id="total-balance">00</span></h4>
-                   <p id="balance-error"  class="my-4">&#10060;Cost is greater than income</p>
+                   <h3 class="my-3">Total Expenses:<span id="total-expenses" >0</span></h3>
+                   <h4  class="my-3">Balance:<span id="total-balance">0</span></h4>
+                   <p id="balance-error"  class="my-4">&#10060;You have no enough money to expense</p>
                    <!-- saving-part -->
                    Save: <input id="save-input" type="text" value="0">
                    <span>%</span>
                    <button id="save-btn">Save</button>
-                   <p id="saving-input-error"  class="my-4">&#10060; Please give valid number</p>
-                   <h5 class="my-3">Saving Amount:<span  id="saving-amount" >00</span></h5>
-                   <p id="saving-amount-error"  class="my-4">&#10060;Saving amount is greather than balance</p>
-                   <h4 class="my-3">Remaining Balance:<span id="remaining-amount">00</span></h4>
+                   <p id="saving-input-error"  class="my-4">&#10060; Please give a valid number</p>
+                   <h5 class="my-3">Saving Amount:<span  id="saving-amount" >0</span></h5>
+                   <p id="saving-amount-error"  class="my-4">&#10060;You have no enough money for saving</p>
+                   <h4 class="my-3">Remaining Balance:<span id="remaining-amount">0</span></h4>
                 </div>
             </div>
         </div>
