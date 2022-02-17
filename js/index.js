@@ -48,6 +48,7 @@ function getExpenses(){
     
 
 }
+//  saving amount
 function savingMoney(){
     const savingInput=document.getElementById("save-input");
     const savingAmount=parseFloat(savingInput.value);
@@ -86,8 +87,9 @@ document.getElementById("save-btn").addEventListener("click",function(){
        document.getElementById("saving-amount-error").style.display="block";
    }
    else{
+     const remainingAmount =totalBalance - savingAmount
      document.getElementById("saving-amount").innerText=savingAmount;
-     document.getElementById("remaining-amount").innerText=totalBalance - savingAmount;
+     document.getElementById("remaining-amount").innerText=remainingAmount;
    }
 });
 
