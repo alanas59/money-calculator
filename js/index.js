@@ -44,10 +44,13 @@ function getExpenses(){
 
 }
 
+// get balance
+
+
 document.getElementById("calculate-btn").addEventListener("click",function(){
     const incomeAmount=getIncome();
     const totalCost=getExpenses();
-
+    console.log(incomeAmount,totalCost);
     if(totalCost>incomeAmount)
     {
         document.getElementById("balance-error").style.display="block"
