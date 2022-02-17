@@ -17,7 +17,8 @@ input:focus{
     outline: none;
 }
                    
-#income-error,#expenses-error,#balance-error{
+#income-error,#expenses-error,#balance-error,
+#saving-input-error,#saving-amount-error{
     display: none;
 }
 span{

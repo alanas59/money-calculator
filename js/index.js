@@ -5,6 +5,8 @@ function getIncome(){
    if(incomeAmount<0 || isNaN(incomeAmount))
    {
        document.getElementById("income-error").style.display="block";
+       return 0;
+      
    }
    else{
        return incomeAmount;
@@ -31,10 +33,13 @@ function getExpenses(){
     if(foodCost<0 || rentCost<0 || clothsCost<0)
     {
        document.getElementById("expenses-error").style.display="block";  
+       return 0;
+      
     }
     else if(isNaN(foodCost) || isNaN(rentCost) || isNaN(clothsCost))
     {
-       document.getElementById("expenses-error").style.display="block";    
+       document.getElementById("expenses-error").style.display="block";   
+       return 0; 
     }
     else{
         return foodCost + rentCost + clothsCost;
@@ -43,14 +48,24 @@ function getExpenses(){
     
 
 }
-
-// get balance
+function savingMoney(){
+    const savingInput=document.getElementById("save-input");
+    const savingAmount=parseFloat(savingInput.value);
+    if(savingAmount<0 || isNaN(savingAmount))
+    {
+        document.getElementById("saving-input-error").style.display="block";
+        return 0;
+    }
+    else{
+        return savingAmount;
+    }
+}
 
 
 document.getElementById("calculate-btn").addEventListener("click",function(){
     const incomeAmount=getIncome();
     const totalCost=getExpenses();
-    console.log(incomeAmount,totalCost);
+  
     if(totalCost>incomeAmount)
     {
         document.getElementById("balance-error").style.display="block"
@@ -62,3 +77,17 @@ document.getElementById("calculate-btn").addEventListener("click",function(){
     }
 
 });
+
+document.getElementById("save-btn").addEventListener("click",function(){
+   const savingAmount=(savingMoney()/100)*getIncome();
+   const totalBalance=getIncome()-getExpenses();
+   if(savingAmount>totalBalance)
+   {
+       document.getElementById("saving-amount-error").style.display="block";
+   }
+   else{
+     document.getElementById("saving-amount").innerText=savingAmount;
+     document.getElementById("remaining-amount").innerText=totalBalance - savingAmount;
+   }
+});
+
